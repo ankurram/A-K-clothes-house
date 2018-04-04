@@ -1,0 +1,84 @@
+<html>
+  <body>
+
+<form (ngSubmit)="onSubmited(registerForm)" #registerForm="ngForm"novalidate>
+  <div class="input-feild">
+                Enter the user address detalis<br>
+        <label>Address</label>
+        <textarea rows="2" cols="25" placeholder="Address" [(ngModel)]="value.address"   name="address"  #address="ngModel" required>
+          </textarea>
+           <div *ngIf="address.errors && (address.dirty || address.touched)" class="alert alert-danger">
+              <div *ngIf="address.errors.required">
+                  address is required.
+                </div>
+             
+        </div><br>
+        <label>LandMark</label>
+        <input type="text" placeholder="enter your landmark" name="LM" #LM = "ngModel" [(ngModel)] = "value.LM" required>
+        <div *ngIf="LM.errors && (LM.dirty || LM.touched)" class="alert alert-danger">
+            <div *ngIf="LM.errors.required">
+                LandMark is required.
+              </div>
+        </div><br>
+      <label>city</label>
+      <input type="text" placeholder="enter your city" name="city" #city="ngModel" [(ngModel)] = "value.city"  minlength="4" required>
+      <div *ngIf="city.errors && (city.dirty || city.touched)" class="alert alert-danger">
+          <div *ngIf="city.errors.required">
+              city is required.
+            </div>
+            <div *ngIf="city.errors.minlength">
+              city must be at least 4 characters long.
+            </div>
+      </div> <br>
+      <label>Zip code</label>
+      <input type="text" placeholder="enter your zip code" name="zipcode" #zipcode="ngModel" [(ngModel)] = "value.zipcode" minlength="6" maxlength="6"  pattern ="[0-9]*" required>
+      <div *ngIf="zipcode.errors && (zipcode.dirty || zipcode.touched)" class="alert alert-danger">
+          <div *ngIf="zipcode.errors.required">
+              zipcode is required.
+            </div>
+            <div *ngIf="zipcode.errors.pattern">
+              only number
+            </div> 
+            <div *ngIf="zipcode.errors.minlength">
+                only 6 digit allow
+              </div> 
+              <div *ngIf="zipcode.errors.maxlength">
+                  only 6 digit allow
+                </div>
+      </div><br>
+      <label>State</label>
+      <input type="text" placeholder="enter your State" name="state" #state="ngModel" [(ngModel)] = "value.state"  required>
+      <div *ngIf="state.errors && (state.dirty || state.touched)" class="alert alert-danger">
+          <div *ngIf="state.errors.required">
+              state is required.
+            </div>
+      </div><br>
+      <label>Country</label>
+      <input type="text" placeholder="enter your Country" name="country" #country="ngModel" [(ngModel)] = "value.country"  required>
+      <div *ngIf="country.errors && (country.dirty || country.touched)" class="alert alert-danger">
+          <div *ngIf="country.errors.required">
+              state is required.
+            </div>
+      </div><br>      
+      <label>contact </label>
+      <input type="text" placeholder="enter your contact number" name="contactNumber" #contactNumber="ngModel" [(ngModel)] = "value.contactNumber" minlength="10" maxlength="10"  pattern ="[0-9]*" required>
+      <div *ngIf="contactNumber.errors && (contactNumber.dirty || contactNumber.touched)" class="alert alert-danger">
+          <div *ngIf="contactNumber.errors.required">
+              contact Number is required.
+            </div>
+            <div *ngIf="contactNumber.errors.pattern">
+              only number
+            </div> 
+            <div *ngIf="contactNumber.errors.minlength">
+                only 10 digit allow
+              </div> 
+              <div *ngIf="contactNumber.errors.maxlength">
+                  only 10 digit allow
+                </div>
+      </div><br>
+
+  </div>
+  <button type="submit" [disabled]="!registerForm.form.valid">Register</button>
+</form>
+</body>
+</html>

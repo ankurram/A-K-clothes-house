@@ -1,0 +1,42 @@
+<html>
+  <head>
+      <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+      <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+      <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <title>All moblie</title>
+  </head>
+    <body>
+        <div class="container">
+            <div *ngFor='let product of products'>
+            <div class="product">
+                <div class="img-container">
+                    <img src ={{product.path}}/>
+                </div>
+                <div class="product-info">
+                  <div class="product-content">
+                    <h1> {{product.product_name}}</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit ariatur</p>
+                    <ul>
+                      <li>Lorem ipsum dolor sit ametconsectetu.</li>
+                      <li>adipisicing elit dlanditiis quis ip.</li>
+                      <li>lorem sde glanditiis dars fao.</li>
+                    </ul>
+                    <div class="buttons">
+                      <a class="button buy" href="#">Buy</a>
+                      <a class="button add" href="#">Add to Cart</a>
+                      <span class="button" id="price"> {{product.rate}}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+         </div>
+  <!-- <div *ngFor='let product of products'>
+       {{product.product_name}}
+       <img src ={{product.path}}/>
+       {{product.rate}}
+
+  </div> -->
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+html {
+    margin: 40px auto;
+    text-align: center;
+  }
+  .btn-facebook {
+        background: #3B5998;
+        border-radius: 0;
+        color: #fff;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #263961; 
+      }
+      .btn-facebook:link, .btn-facebook:visited {
+        color: #fff;
+      }
+      .btn-facebook:active, .btn-facebook:hover {
+        background: #263961;
+        color: #fff;
+      }
+      .btn-googleplus {
+        background: #E93F2E;
+        border-radius: 0;
+        color: #fff;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #b72213;
+        width: 199px;
+      }
+      .btn-googleplus:link, .btn-googleplus:visited {
+        color: #fff;
+      }
+      .btn-googleplus:active, .btn-googleplus:hover {
+        background: #b72213;
+        color: #fff;
+      }
+
+      .btn-default {
+        color: #333;
+        background-color: #56a037ad;
+        border-color: #ccc;
+        width: 199px;
+        height: 40px;
+        font-size: 20px;
+        color: white;
+    }
